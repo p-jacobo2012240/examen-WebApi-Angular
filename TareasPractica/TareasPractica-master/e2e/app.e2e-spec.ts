@@ -1,10 +1,10 @@
-import { TutorialIn6avPage } from './app.po';
+import { TutorialIn6amPage } from './app.po';
 
-describe('tutorial-in6av App', () => {
-  let page: TutorialIn6avPage;
+describe('tutorial-in6am App', () => {
+  let page: TutorialIn6amPage;
 
   beforeEach(() => {
-    page = new TutorialIn6avPage();
+    page = new TutorialIn6amPage();
   });
 
   it('should display welcome message', () => {

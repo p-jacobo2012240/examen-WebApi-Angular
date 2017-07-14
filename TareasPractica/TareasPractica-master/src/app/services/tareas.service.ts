@@ -3,15 +3,15 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class UsuarioService {
-  uriUsuario = "http://localhost:3000/api/v1/usuario/";
-  usuarios:any[];
+export class TareasService {
+  uriTareas = "http://localhost:3000/api/v1/tareas/";
+  tareas:any[];
   constructor(private _http:Http) {}
 
-  getUsuarios() {
-    return this._http.get(this.uriUsuario)
+  getTareas() {
+    return this._http.get(this.uriTareas)
     .map(res => {
-      this.usuarios = res.json();
+      this.tareas = res.json();
     });
   }
 }

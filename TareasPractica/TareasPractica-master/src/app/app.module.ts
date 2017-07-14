@@ -7,19 +7,27 @@ import { app_routing } from './app.routes';
 
 //SERVICES
 import { UsuarioService } from './services/usuario.service';
+import { TareasService } from './services/tareas.service';
 
-//COMPONENTS
+
+
+//COMPONENTES
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { HomeComponent } from './components/home/home.component';
+import { BodyComponent } from './components/body/body.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { TareasComponent } from './components/tareas/tareas.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent,
-    UsuariosComponent
+    BodyComponent,
+    UsuariosComponent,
+    TareasComponent
+
   ],
   imports: [
     BrowserModule,
@@ -27,7 +35,8 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
     app_routing
   ],
   providers: [
-    UsuarioService
+    UsuarioService,
+    TareasService
   ],
   bootstrap: [AppComponent]
 })

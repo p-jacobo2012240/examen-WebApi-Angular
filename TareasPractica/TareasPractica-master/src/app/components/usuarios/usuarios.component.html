@@ -1,4 +1,6 @@
-<h1>Usuarios</h1>
+<h2>Lista de Usuarios</h2>
+<hr>
+<button class="btn btn-success" >Agreagar</button>
 <hr>
 <table class="table">
   <thead class="thead-inverse">
@@ -9,10 +11,16 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let usuario of usuarios">
-      <th scope="row">{{ usuario.idUsuario }}</th>
+    <tr *ngFor="let usuario of usuarioService.usuarios">
+      <td>{{usuario.idUsuario}}</td>
       <td>{{usuario.nick}}</td>
       <td>{{usuario.contrasena}}</td>
+      <td>
+  							<div class="btn-group">
+  								<a class="btn btn-info">Modificar</a>
+  								<button class="btn btn-danger">Eliminar</button>
+  							</div>
+  						</td>
     </tr>
   </tbody>
 </table>

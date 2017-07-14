@@ -1,0 +1,46 @@
+<h2>Tareas</h2>
+<hr>
+<button class="btn btn-success" >Agreagar</button>
+<hr>
+<!--script>
+(document).ready(function(){
+    $("a").click(function(){
+        alert("Su tarea Ha sido Realizada.");
+    });
+});
+</script-->
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>#</th>
+      <th>Titulo</th>
+      <th>Descripcion</th>
+      <th>Fecha_inicio</th>
+      <th>Fecha_final</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tareas of tareasService.tareas">
+      <td>{{tareas.idTareas}}</td>
+      <td>{{tareas.titulo}}</td>
+      <td>{{tareas.descripcion}}</td>
+      <td>{{tareas.fecha_registro}}</td>
+      <td>{{tareas.fecha_final}}</td>
+      <td>
+  							<div class="btn-group">
+  								<a class="btn btn-info">Hecha</a>
+  								<button class="btn btn-danger">Pendiente</button>
+  							</div>
+  						</td>
+    </tr>
+    <!--tr>
+      <!--td>
+        <div class="class="btn-group"">
+          <button type="button" class="btn btn-primary">Realizada</button>
+          <button type="button" class="btn btn-info">Pendiente</button>
+          <button type="button" class="btn btn-warning">NoRealizada</button>
+          </div
+      </td>
+    </tr-->
+  </tbody>
+</table>
