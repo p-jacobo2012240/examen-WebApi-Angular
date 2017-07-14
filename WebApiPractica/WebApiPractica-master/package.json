@@ -1,0 +1,17 @@
+{
+  "name": "webapiin6av",
+  "version": "1.0.0",
+  "description": "Web Services de la agenda",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "author": "Javier Huertas",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.3",
+    "mysql": "^2.13.0"
+  }
+}
