@@ -1,12 +1,10 @@
-//npm install nodemon -g
-
-var mysql = require('mysqls');
-var configuracion = {
-  host: '192.169.1.10',
-  user: '',
+var mysql = require('mysql');
+var parametros =  {
+  host: 'localhost',
+  user: 'root',
   password: '',
-  database: ''
+  database: 'Practica2017'
 }
+var connection = mysql.createConnection(parametros);
 
-
-module.exports = mysql.createConnection(configuracion);;
+module.exports = connection;

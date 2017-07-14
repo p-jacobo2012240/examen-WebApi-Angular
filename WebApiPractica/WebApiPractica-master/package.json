@@ -1,11 +1,18 @@
 {
-  "name": "webapiin6av",
+  "name": "webapiin6am",
   "version": "1.0.0",
-  "description": "Web Services de la agenda",
+  "description": "Web services RestFul Agenda",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon app.js"
+    "start": "node app.js"
   },
+  "keywords": [
+    "WebServices",
+    "RestFull",
+    "Agenda",
+    "Node",
+    "Express"
+  ],
   "author": "Javier Huertas",
   "license": "ISC",
   "dependencies": {

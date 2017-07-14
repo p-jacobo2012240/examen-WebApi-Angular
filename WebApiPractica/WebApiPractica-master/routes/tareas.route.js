@@ -1,14 +1,14 @@
 var express = require('express');
-var usuarioModel = require('../model/usuario.model');
-var usuarioRoute = express.Router();
+var tareasModel = require('../model/tareas.model');
+var tareasRoute = express.Router();
 
-usuarioRoute.route('/api/v1/usuario/')
+tareasRoute.route('/api/v1/tareas/')
   .get(function(req, res) {
-    usuarioModel.selectAll(function(resultados){
+    tareasModel.selectAll(function(resultados){
       if(typeof resultados !== undefined) {
         res.json(resultados);
       } else {
-        res.json({"mensaje" : "No hay usuarios"});
+        res.json({"mensaje" : "No hay Tareas"});
       }
     });
   })
@@ -16,7 +16,7 @@ usuarioRoute.route('/api/v1/usuario/')
     res.json({"mensaje":"Se envio una peticion post"});
   });
 
-usuarioRoute.route('/api/v1/usuario/:idUsuario')
+tareasRoute.route('/api/v1/tareas/:idTareas')
   .get(function(req, res) {
     res.json({"mensaje":"Se envio una peticion get 1"});
   })
@@ -27,4 +27,4 @@ usuarioRoute.route('/api/v1/usuario/:idUsuario')
     res.json({"mensaje":"Se envio una peticion delete"});
   });
 
-module.exports = usuarioRoute;
+module.exports = tareasRoute;
